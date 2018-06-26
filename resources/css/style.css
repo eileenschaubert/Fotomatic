@@ -8,7 +8,6 @@
 
 
 /* Tablet notes  */
-/* missing background image in hero */
 /* images sized incorrectly in all sections */
 /* is top banner sized correctly? @760 it looks to be mobile format */
 /* missing join us button in top nav */
@@ -17,6 +16,9 @@
 /* gallery should be horizontal not vertical */
 
 /* Mobile notes */
+/* header and hero are not positioned properly */
+/* features img are slightly off */
+/* features text is not spaced properly */
 /* missing background color on mid section */
 /* gallery should be horizontal not vertical */
 
@@ -98,11 +100,30 @@ header .icon {
   padding-left: .75rem;
 }
 
+header .mobile button {
+  display: none;
+}
+
 header .mobile {
   display: none;
 }
 
-@media only screen and (max-width: 760px) {
+@media screen and (max-width: 760px) {
+  header .mobile {
+    display: none;
+  }
+
+  header .desktop .button {
+    padding: .1875rem .5rem;
+    background-color: #9dc20b;
+    line-height: 1.6;
+    color: white;
+  }
+
+}
+
+
+@media only screen and (max-width: 450px) {
   header .desktop {
     display: none;
   }
@@ -113,7 +134,7 @@ header .mobile {
   }
 
   header .content {
-    padding: .5rem 0;
+    padding: .75rem 0;
   }
 
   header .mobile ul {
@@ -371,10 +392,11 @@ header .mobile {
 
 #quotes-section {
   background-color: #f3f3f3;
-  margin: 80px auto;
+  margin: 0 auto;
 }
 
-#quotes-section content {
+#quotes-section .content {
+  display: flex;
   padding: 5rem 0;
 }
 
@@ -387,25 +409,37 @@ header .mobile {
   color: #4a4a4a;
 }
 
-#quotes-section quote-citation {
+#quotes-section .quote-citation {
   height: 1.875rem;
 }
 
 @media only screen and (max-width: 760px) {
-  #quotes-section content {
+  #quotes-section {
+    background-color: white;
+    padding: 1.875rem .625rem;
+  }
+  #quotes-section .content {
+    background-color: white;
     padding: 1.875rem .625rem;
   }
 
-  #quotes-section quote {
+  #quotes-section .quote {
     font-size: 1.5rem;
     line-height: 1.4;
   }
 
-  #quotes-section quote-citation {
+  #quotes-section .quote-citation {
     display: block;
     padding-top: 1rem;
     margin: auto;
   }
+}
+
+@media screen and (max-width: 450px) {
+  #quotes-section .content {
+    flex-direction: column;
+  }
+
 }
 
 /* Footer */
