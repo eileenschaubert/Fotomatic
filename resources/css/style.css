@@ -1,3 +1,27 @@
+/* Desktop notes */
+/* images sized incorrectly in all sections */
+/* gallery should be horizontal not vertical */
+/* missing quote above the footer - need to align items vertically*/
+/* .feature img is not quite right */
+/* features container is too long */
+
+
+
+/* Tablet notes  */
+/* missing background image in hero */
+/* images sized incorrectly in all sections */
+/* is top banner sized correctly? @760 it looks to be mobile format */
+/* missing join us button in top nav */
+/* mid section should be horizontal not vertical */
+/* font sizes/bold are incorrect for mid section */
+/* gallery should be horizontal not vertical */
+
+/* Mobile notes */
+/* missing background color on mid section */
+/* gallery should be horizontal not vertical */
+
+/* footer done */
+
 /* Universal Styles */
 
 html {
@@ -6,7 +30,7 @@ html {
 }
 
 .main-content {
-  position: relative;
+  /* position: relative; */
   top: 5.3125rem; /* To offset for fixed header. */
 }
 
@@ -38,6 +62,7 @@ html {
 
 header {
   position: fixed;
+  top: 0;
   width: 100%;
   border-bottom: solid 1px #c6c1c1;
   background-color: white;
@@ -117,6 +142,7 @@ header .mobile {
   justify-content: flex-start;
   align-items: flex-start;
   height: 43.5rem;
+  background-image: url("../images/banner-landingpage.jpg");
 }
 
 #sign-up-cta {
@@ -124,6 +150,9 @@ header .mobile {
   border: solid 1px #979797;
   border-radius: 4px;
   background-color: #9dc20b;
+  margin-top: 170px;
+  margin-bottom: 170px;
+  margin-left: 100px;
 }
 
 #sign-up-cta .content {
@@ -214,6 +243,7 @@ header .mobile {
   justify-content: space-between;
   padding: 4rem 5%;
   background-color: #f3f3f3;
+  height: 635px;
 }
 
 .feature {
@@ -227,6 +257,10 @@ header .mobile {
   width: 90%;
   height: 65%;
   margin: 0 auto;
+}
+
+.feature img {
+  width: 100%;
 }
 
 .feature h2 {
@@ -294,9 +328,14 @@ header .mobile {
 }
 
 #filters-section .images-container {
-  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  /* max-width: 100%; */
+  /* height: auto; */
   padding: 0 1%;
 }
+
+
 
 @media only screen and (max-width: 760px) {
   #filters-section {
@@ -332,13 +371,14 @@ header .mobile {
 
 #quotes-section {
   background-color: #f3f3f3;
+  margin: 80px auto;
 }
 
 #quotes-section content {
   padding: 5rem 0;
 }
 
-#quotes-section quote {
+#quotes-section .quote {
   padding-right: 1.875rem;
   font-family: "Palatino", serif;
   font-size: 1.875rem;
