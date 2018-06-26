@@ -1,27 +1,25 @@
 /* Desktop notes */
 /* images sized incorrectly in all sections */
 /* gallery should be horizontal not vertical */
-/* missing quote above the footer - need to align items vertically*/
 /* .feature img is not quite right */
 /* features container is too long */
-
+/* roboto light in filter section not working even with low font-weight number */
 
 
 /* Tablet notes  */
 /* images sized incorrectly in all sections */
-/* is top banner sized correctly? @760 it looks to be mobile format */
-/* missing join us button in top nav */
 /* mid section should be horizontal not vertical */
 /* font sizes/bold are incorrect for mid section */
 /* gallery should be horizontal not vertical */
 
 /* Mobile notes */
-/* header and hero are not positioned properly */
+/* hero image and instant banner are not positioned properly */
 /* features img are slightly off */
 /* features text is not spaced properly */
 /* missing background color on mid section */
 /* gallery should be horizontal not vertical */
 
+/* header done */
 /* footer done */
 
 /* Universal Styles */
@@ -100,7 +98,7 @@ header .icon {
   padding-left: .75rem;
 }
 
-header .mobile button {
+header .desktop .button {
   display: none;
 }
 
@@ -114,6 +112,7 @@ header .mobile {
   }
 
   header .desktop .button {
+    display: block;
     padding: .1875rem .5rem;
     background-color: #9dc20b;
     line-height: 1.6;
@@ -123,7 +122,7 @@ header .mobile {
 }
 
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 730px) {
   header .desktop {
     display: none;
   }
@@ -164,6 +163,8 @@ header .mobile {
   align-items: flex-start;
   height: 43.5rem;
   background-image: url("../images/banner-landingpage.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 #sign-up-cta {
@@ -220,6 +221,8 @@ header .mobile {
 
   #sign-up-cta {
     position: static;
+    margin: 0;
+    padding: 0;
     width: auto;
     height: auto;
     background-color: transparent;
@@ -331,6 +334,7 @@ header .mobile {
 }
 
 #filters-section .content {
+  line-height: 1.4;
   padding: 0 .625rem;
   margin-bottom: 5rem;
 }
@@ -343,8 +347,7 @@ header .mobile {
 
 #filters-section .content h3 {
   font-size: 1rem;
-  line-height: 1.4;
-  font-weight: 300;
+  font-weight: 100;
   color: white;
 }
 
@@ -398,6 +401,7 @@ header .mobile {
 #quotes-section .content {
   display: flex;
   padding: 5rem 0;
+  justify-content: space-around;
 }
 
 #quotes-section .quote {
